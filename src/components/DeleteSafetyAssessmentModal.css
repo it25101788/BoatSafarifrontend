@@ -1,0 +1,191 @@
+.delete-safety-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3100;
+
+  display: grid;
+  place-items: center;
+
+  padding: 24px;
+
+  background: rgba(5, 24, 28, 0.62);
+  backdrop-filter: blur(8px);
+}
+
+.delete-safety-modal {
+  width: 100%;
+  max-width: 480px;
+
+  padding: 28px;
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow:
+    0 30px 80px rgba(5, 24, 28, 0.3);
+}
+
+.delete-safety-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.delete-safety-icon {
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 14px;
+
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+.delete-safety-close {
+  width: 38px;
+  height: 38px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--border);
+  border-radius: 11px;
+
+  background: #fafcfb;
+  color: var(--text-secondary);
+
+  cursor: pointer;
+}
+
+.delete-safety-content > span {
+  color: #dc2626;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.delete-safety-content h2 {
+  margin-top: 6px;
+  margin-bottom: 10px;
+
+  font-size: 27px;
+  letter-spacing: -0.8px;
+}
+
+.delete-safety-content p {
+  margin-bottom: 20px;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.delete-safety-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-bottom: 24px;
+}
+
+.delete-safety-summary > div {
+  display: flex;
+  flex-direction: column;
+
+  padding: 13px;
+
+  border: 1px solid #fee2e2;
+  border-radius: 13px;
+
+  background: #fff8f8;
+}
+
+.delete-safety-summary span {
+  margin-bottom: 4px;
+
+  color: var(--text-muted);
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.delete-safety-summary strong {
+  overflow-wrap: anywhere;
+
+  color: var(--text-primary);
+
+  font-size: 11px;
+}
+
+.delete-safety-actions {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+
+  gap: 10px;
+}
+
+.delete-safety-actions button {
+  min-height: 49px;
+
+  border-radius: 13px;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+.delete-safety-back {
+  border: 1px solid var(--border);
+
+  background: white;
+  color: var(--text-secondary);
+}
+
+.delete-safety-confirm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dc2626,
+      #ef4444
+    );
+
+  color: white;
+}
+
+.delete-safety-actions button:disabled,
+.delete-safety-close:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  .delete-safety-modal {
+    padding: 22px;
+  }
+
+  .delete-safety-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .delete-safety-actions {
+    grid-template-columns: 1fr;
+  }
+}
